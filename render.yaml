@@ -3,9 +3,10 @@ services:
     name: AIShoppingCompanion
     env: python
     plan: free
+    rootDir: AIShoppingCompanion   # Adjust if your app is in a subfolder
     buildCommand: ""
     startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
-    pythonVersion: 3.10
+    pythonVersion: 3.10            # ⬅️ Force a stable Python version
     envVars:
       - key: SERPAPI_KEY
         sync: false
